@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+//import axios from 'axios';
+
+import axios from '../../axios'
 
 import Post from '../../components/Post/Post';
 import FullPost from '../../components/FullPost/FullPost';
@@ -35,7 +37,6 @@ class Blog extends Component {
     }
     render () {
         let post = <p>Something went wrong!</p>
-        console.log(!this.state.error, this.state.error);
         if(!this.state.error){
             post = this.state.posts.map(post => {
                 return (
